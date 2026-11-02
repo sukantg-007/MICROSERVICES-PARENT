@@ -1,0 +1,75 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: API-GATEWAY
+  profiles:
+    active:
+      - dev
+  config:
+    import:
+      - optional:configserver:http://localhost:8888
+
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false # Disabled to avoid duplicate auto-generated routes
+      routes:
+        - id: ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/v1/orders/**
+
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+
+        - id: SHOW-SERVICE
+          uri: lb://SHOW-SERVICE
+          predicates:
+            - Path=/api/v1/shows/**
+
+        - id: PAYMENT-SERVICE
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
+
+        - id: SEAT-ALLOCATION-SERVICE
+          uri: lb://SEAT-ALLOCATION-SERVICE
+          predicates:
+            - Path=/api/v1/seats/**
+
+        - id: SAGA-ORCHESTRATOR
+          uri: lb://SAGA-ORCHESTRATOR
+          predicates:
+            - Path=/api/v1/sagas/**
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
+#
+#management:
+#  tracing:
+#    sampling:
+#      probability: 1.0 # 1.0 captures 100% of traces for local dev/testing
+#  zipkin:
+#    tracing:
+#      endpoint: "http://localhost:9411/api/v2/spans"
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "health,info,metrics,prometheus"
+#
+#logging:
+#  pattern:
+#    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"

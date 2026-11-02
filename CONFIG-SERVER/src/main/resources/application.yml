@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sukantg-007/config-server-proj01.git
+          clone-on-start: true
+          search-paths: configs
+          default-label: main

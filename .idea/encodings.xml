@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/API-GATEWAY/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/COMMON-DTO/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/COMMON-DTO/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CONFIG-SERVER/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EUREKA-SERVER/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ORDER-SERVICE/SHOW-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ORDER-SERVICE/USER-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ORDER-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PAYMENT-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SAGA-ORCHESTRATOR/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SEAT-ALLOCATION-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SHOW-SERVICE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/USER-SERVICE/src/main/java" charset="UTF-8" />
+  </component>
+</project>

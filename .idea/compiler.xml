@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EUREKA-SERVER" />
+        <module name="API-GATEWAY" />
+        <module name="CONFIG-SERVER" />
+      </profile>
+      <profile name="Annotation profile for COMMON-DTO" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="COMMON-DTO" />
+      </profile>
+      <profile name="Annotation profile for ORDER-SERVICE" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.3/mapstruct-processor-1.6.3.jar" />
+        </processorPath>
+        <module name="ORDER-SERVICE" />
+      </profile>
+      <profile name="Annotation profile for SEAT-ALLOCATION-SERVICE" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.3/mapstruct-processor-1.6.3.jar" />
+        </processorPath>
+        <module name="SEAT-ALLOCATION-SERVICE" />
+        <module name="PAYMENT-SERVICE" />
+        <module name="SAGA-ORCHESTRATOR" />
+        <module name="USER-SERVICE" />
+        <module name="SHOW-SERVICE" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="API-GATEWAY" options="-parameters" />
+      <module name="CONFIG-SERVER" options="-parameters" />
+      <module name="EUREKA-SERVER" options="-parameters" />
+      <module name="ORDER-SERVICE" options="-parameters" />
+      <module name="PAYMENT-SERVICE" options="-parameters" />
+      <module name="SAGA-ORCHESTRATOR" options="-parameters" />
+      <module name="SEAT-ALLOCATION-SERVICE" options="-parameters" />
+      <module name="SHOW-SERVICE" options="-parameters" />
+      <module name="USER-SERVICE" options="-parameters" />
+    </option>
+  </component>
+</project>
